@@ -13,7 +13,5 @@ pipelines:
             - git checkout master
             # Installing npm packages
             - npm install
-            # Deploy to remote server
-            - cd dist
             - ssh taralite@35.198.223.212 "rm -rf /home/taralite/testing/*"
             - tar -zc ./ | ssh taralite@35.198.223.212 "tar -zx -C /home/taralite/testing"
