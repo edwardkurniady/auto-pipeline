@@ -3,7 +3,7 @@ image: node:carbon
 pipelines:
   branches:
     master:
-      -step:
+      - step:
         caches:
           - node
         script:
