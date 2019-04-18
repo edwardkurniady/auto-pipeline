@@ -13,8 +13,6 @@ pipelines:
             - git checkout master
             # Installing npm packages
             - npm install
-            # Run npm build
-            - CI=false npm run build:dev
             # Deploy to remote server
             - cd dist
             - ssh taralite@35.198.223.212 "rm -rf /home/taralite/testing/*"
