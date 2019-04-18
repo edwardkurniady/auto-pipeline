@@ -7,7 +7,7 @@ pipelines:
           caches:
             - node
           script:
-            - ssh -i id_rsa taralite@35.198.223.212
+            - ssh -i ~/.ssh/id_rsa taralite@35.198.223.212
             - ls
             - echo "Successful Deploy!"
 # image: node:carbon
