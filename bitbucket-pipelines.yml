@@ -7,25 +7,4 @@ pipelines:
           caches:
             - node
           script:
-            # TARGET='/home/taralite/logbook/'
-            # GIT_DIR='/home/taralite/repo.git/'
-            # git --work-tree=$TARGET --git-dir=$GIT_DIR checkout -f
-            # git --work-tree=$TARGET --git-dir=$GIT_DIR pull
-            # cd $TARGET
-            # npm install
-            # pm2 restart 0
-            # echo "Successful Deploy!"
             - ssh -i /opt/atlassian/pipelines/agent/ssh/id_rsa taralite@34.80.239.68 'cd testing && git pull'
-            # - git --work-tree='/home/taralite/testing/' --git-dir=$GIT_DIR checkout -f
-            # - git --work-tree=''/home/taralite/logbook/'' --git-dir=$GIT_DIR pull
-            # # Clone web repository
-            # - git clone https://dudumonstr@bitbucket.org/dudumonstr/testing.git
-            # - cd testing
-            # - git checkout master
-            # - npm install
-            # # Run npm build
-            # - CI=false npm run build:master
-            # # Installing npm packages
-            # - cd testing
-            # - ssh -i id_rsa taralite@34.80.239.68 "rm -rf /home/taralite/testing/*"
-            # - tar -zc ./ | ssh taralite@34.80.239.68 "tar -zx -C /home/taralite/testing"
