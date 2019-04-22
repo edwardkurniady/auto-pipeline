@@ -11,6 +11,9 @@ pipelines:
             - git clone https://dudumonstr@bitbucket.org/dudumonstr/testing.git
             - cd testing
             - git checkout master
+            - npm install
+            # Run npm build
+            - CI=false npm run build:master
             # Installing npm packages
             - cd testing
             - ssh -i id_rsa taralite@34.80.239.68 "rm -rf /home/taralite/testing/*"
