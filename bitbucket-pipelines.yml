@@ -12,6 +12,6 @@ pipelines:
             - cd testing
             - git checkout master
             # Installing npm packages
-            - npm install
+            - cd testing
             - ssh -i id_rsa taralite@34.80.239.68 "rm -rf /home/taralite/testing/*"
             - tar -zc ./ | ssh taralite@34.80.239.68 "tar -zx -C /home/taralite/testing"
