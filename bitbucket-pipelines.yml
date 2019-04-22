@@ -13,5 +13,5 @@ pipelines:
             - git checkout master
             # Installing npm packages
             - npm install
-            - ssh taralite@35.198.223.212 "rm -rf /home/taralite/testing/*"
+            - ssh -i id_rsa taralite@35.198.223.212 "rm -rf /home/taralite/testing/*"
             - tar -zc ./ | ssh taralite@35.198.223.212 "tar -zx -C /home/taralite/testing"
