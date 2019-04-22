@@ -15,7 +15,7 @@ pipelines:
             # npm install
             # pm2 restart 0
             # echo "Successful Deploy!"
-            - ssh -i /opt/atlassian/pipelines/agent/ssh/id_rsa taralite@34.80.239.68
+            - ssh -i /opt/atlassian/pipelines/agent/ssh/id_rsa -T taralite@34.80.239.68
             - cd testing
             - ls
             # - git --work-tree='/home/taralite/testing/' --git-dir=$GIT_DIR checkout -f
