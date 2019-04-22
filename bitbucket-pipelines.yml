@@ -15,7 +15,7 @@ pipelines:
             # npm install
             # pm2 restart 0
             # echo "Successful Deploy!"
-            - ssh -i id_rsa taralite@34.80.239.68
+            - ssh -i ~/.ssh/id_rsa taralite@34.80.239.68
             # - git --work-tree=$TARGET --git-dir=$GIT_DIR checkout -f
             # - git --work-tree=$TARGET --git-dir=$GIT_DIR pull
             # # Clone web repository
